@@ -4,8 +4,8 @@ import "./globals.css";
 import { AuthContext } from "../context/AuthContext";
 
 export const metadata: Metadata = {
-  title: "Dositio",
-  description: "My Task Manager",
+  title: "Recitas da vovo",
+  description: "Receita da minha vo",
 };
 
 const RootLayout = ({children}: Readonly<{children: React.ReactNode}>) => {
@@ -15,18 +15,16 @@ const RootLayout = ({children}: Readonly<{children: React.ReactNode}>) => {
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"></link>
       </head>
 
-        <body className={"bg-slate-100"}>
+        <body className={"bg-yellow-100"}>
         <AuthProvider>
-          <header className="bg-gray-800 text-white py-4">
+          <header className="bg-green-600 text-white py-4">
             <nav className="container mx-auto flex justify-between items-center">
                 <h1 className="text-2xl font-bold">Matheus Muruci de Souza Lopes</h1>
                 <ul className="flex space-x-4">
-                    <li><a href="/recipes" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Ver receitas</a></li>
-                    <li><a href="/login" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Login</a></li>
+                    <li><a href="/login" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Login</a></li>
                 </ul>
             </nav>
           </header>
-          
             {children}
           </AuthProvider>
         </body>

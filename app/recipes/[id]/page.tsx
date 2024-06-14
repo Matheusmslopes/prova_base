@@ -1,4 +1,5 @@
 import {promises as pr } from 'fs';
+import Link from 'next/link'
 
 interface RecipeType{
   id: string;
@@ -34,7 +35,12 @@ export default async function Home({ params }: { params: { id: string } }) {
           </div>
         </div>
       </div>
+      <br></br>
+      <Link href="/recipes">
+        <p className='inline-block px-4 py-2 rounded bg-[#ff5e1e] font-bold text-[#ffffff] cursor-pointer'>Voltar</p>
+      </Link>
     </div>
+    
   );
 }
 
